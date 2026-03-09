@@ -1,0 +1,80 @@
+.task-card {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 0.8rem;
+  background: #fff;
+  border: 1px solid #f0d6d6;
+  border-radius: 10px;
+  transition: box-shadow 0.15s;
+}
+
+.task-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.task-card.task-done .task-card-title {
+  text-decoration: line-through;
+  color: #bbb;
+}
+
+.task-card-title {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #444;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Status circle */
+.status-circle {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.2s;
+}
+
+.status-circle.todo {
+  border-color: #ddd;
+}
+
+.status-circle.inprogress {
+  border-color: #f4845f;
+}
+
+.status-circle.done {
+  border-color: #4caf50;
+  background: #4caf50;
+}
+
+.check-icon {
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Delete button */
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.15rem 0.3rem;
+  border-radius: 6px;
+  opacity: 0.4;
+  transition: opacity 0.15s;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+}
